@@ -54,3 +54,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#rexml gem is a not a default gem since Ruby 3.0.0. So you must add rexml to Gemfile.
+gem 'rexml'
