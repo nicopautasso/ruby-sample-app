@@ -207,7 +207,6 @@ GEM
       nokogiri (~> 1.8)
     zeitwerk (2.4.2)
     pg (1.2.3)
-      pg (1.2.3-x86-mingw32)
 
 PLATFORMS
   arm64-darwin-20
