@@ -13,9 +13,7 @@ default: &default
 
 development:
   <<: *default
-  database: dcjn1hnncil1au
-  username: lxcxrqqtaznhug
-  password: e0941d82b1a5f81bb534e629af38bb9b58ba4226c87ef68c586ce33029a230d5**||
+  database: inv_development
 
 test:
   <<: *default
@@ -23,6 +21,6 @@ test:
 
 production:
   <<: *default
-  database: inv_production
-  username: postgres
-  password: <%= ENV['YOUR_APP_NAME_HERE_DATABASE_PASSWORD'] %>
+  database: dcjn1hnncil1au
+  username: lxcxrqqtaznhug
+  password: e0941d82b1a5f81bb534e629af38bb9b58ba4226c87ef68c586ce33029a230d5**||
