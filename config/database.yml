@@ -21,6 +21,6 @@ test:
 
 production:
   <<: *default
-  database: dcjn1hnncil1au
-  username: lxcxrqqtaznhug
-  password: e0941d82b1a5f81bb534e629af38bb9b58ba4226c87ef68c586ce33029a230d5**||
+  database: d65b1f7bm7h9s1
+  username: iwgkmnwhinmbjk
+  password: 40e303d9b6ee5b4f129a936cfb34b24fb4b16f8679785f43c82d236cd304123c**||
