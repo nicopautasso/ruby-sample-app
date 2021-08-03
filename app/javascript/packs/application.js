@@ -6,10 +6,18 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-require ("jquery")
-import "bootstrap"
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import "channels"
+import "jquery"
+import "bootstrap"
+
+document.addEventListener("turbolinks:load", function() {
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+        $('.dropdown-toggle').dropdown()
+    })
+})
