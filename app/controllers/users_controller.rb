@@ -39,12 +39,19 @@ class UsersController < ApplicationController
     end
   end
 
-before_action :logged_in_user, only: [:edit, :update, :index]
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "Usuario correctamente eliminado"
+    redirect_to users_url
+  end
+
+before_action :logged_in_user, only: [:edit, :update, :index, :destroy]
+before_action :admin_user, only: :destroy
 
 private
   def user_params
-    params.require(:user).permit(:name, :email, :password,
-                                  :password_confirmation)
+    #el .permit se utiliza como strong parameters, para no permitir que se modifiquen otros que no sean los especificados
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
   #confirma que el usuario este logeado
@@ -62,3 +69,8 @@ private
     redirect_to(root_url) unless current_user?(@user)
   end
 end
+
+  #confirma que un usuario sea administrador
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end

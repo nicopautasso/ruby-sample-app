@@ -5,6 +5,9 @@
    <% @users.each do |user| %>
    <li>
       <%= link_to user.name, user %>
+      <% if current_user.admin? && !current_user?(user) %>
+      <%= link_to "Eliminar usuario", user, method: :delete, data: { confirm: "Esta seguro?" } %>
+      <% end %>
    </li>
    <% end %>
 </ul>
