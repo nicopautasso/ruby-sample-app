@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :products
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-#se usa para redirigir a los recursos necesarios
+  #se usa para redirigir a los recursos necesarios
   root 'static_pages#home'
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'

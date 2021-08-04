@@ -6,7 +6,8 @@
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Ayuda", help_path %></li>
             <% if logged_in? %>
-            <li><%= link_to "Usuarios", users_path %></li>
+            <li><%= link_to "Ver usuarios", users_path %></li>
+            <li><%= link_to "Ver productos", products_path %></li>
             <li class="dropdown">
                <a href class="dropdown-toggle" datatoggle="dropdown">
                Cuenta <b class="caret"></b>

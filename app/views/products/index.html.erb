@@ -1,0 +1,35 @@
+
+<% provide(:title, 'Productos') %>
+<h1>Todos los productos</h1>
+
+<p id="notice"><%= notice %></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Cantidad</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to 'Ver', product, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Editar', edit_product_path(product), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Esta seguro que quiere eliminar el articulo?' }, class: "btn btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo producto', new_product_path, class:"btn btn-success" %>
