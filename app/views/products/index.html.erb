@@ -2,7 +2,18 @@
 <% provide(:title, 'Productos') %>
 <h1>Todos los productos</h1>
 
-<p id="notice"><%= notice %></p>
+<div class="row">
+    <div class="col-12 col-md-10">
+      <%= form_with(url: '/products', method: 'get', local: true) do %>
+
+      <%= select_tag "products_finder", options_from_collection_for_select(@products, "id", "name", params[:products_finder]), class: 'form-control content-search dropdown-item', size: 20, include_blank: true %>
+    </div>
+    <div class="col-12 col-md-2">
+      <%= submit_tag("Buscar", class: "btn btn-primary") %>
+    </div>
+</div>
+
+<% end %>
 
 <table class="table table-hover">
   <thead>

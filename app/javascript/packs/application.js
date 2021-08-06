@@ -13,6 +13,7 @@ ActiveStorage.start()
 import "channels"
 import "jquery"
 import "bootstrap"
+import "select2"
 
 document.addEventListener("turbolinks:load", function() {
     $(function () {
@@ -20,4 +21,12 @@ document.addEventListener("turbolinks:load", function() {
         $('[data-toggle="popover"]').popover()
         $('.dropdown-toggle').dropdown()
     })
+})
+
+$(document).ready(function() {
+  $('#products_finder').select2({
+    placeholder: "Busque producto por ID o nombre",
+    allowClear: true,
+    theme: "bootstrap"
+  });
 })

@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '3.4.1'
 gem 'rails-controller-testing'
 gem 'will_paginate', '3.1.8'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem "select2-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use sqlite3 as the database for Active Record
